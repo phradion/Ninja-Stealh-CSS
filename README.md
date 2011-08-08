@@ -1,7 +1,7 @@
 # About
 This little snippet is created to work with Joni Korpi's LessFramework and SASS language (http://sass-lang.com/).
 
-The basic idea is that you often want to hide/display/expand to full width a certain block of text/image/element depends on the current resolutions of users' browsers. For example, you may want to expand your banner in the left column to full width on an iPhone screen.
+The basic idea is that you often want to hide/display/expand to full width a certain block of text/image/element depends on the current resolutions of users' browsers. For example, you may want to expand your banner in the left column to full width on an iPhone screen but often want the object to return back to the left column for users with better screen size.
 
 This is designed to work with LessFramework 3. As LessFramework 5 is under development, I'll wait until its release then update the code to accommodate with the newer version.
 
@@ -22,4 +22,5 @@ By running this command.
 sass --watch main.scss:main.css
 
 And you should not be worry about other files that starts with underscore as they are automatically compiled by SASS and included to the final css file.
-## Usage examples:
+## Usage and examples
+The reason why 

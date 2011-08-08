@@ -1,0 +1,102 @@
+/* JMango .. Ninja Skills
+	Developed by Huy "Phradion" Dinh @ JMango.
+	2011 :-)
+-------------------------------------------------------------- */
+
+/* 	Mobile version. 
+	Lowest Resolution, Resolution 1 (320px)
+-------------------------------------------------------------- */
+
+	.appear-lowest 				{ display:block; }
+	.appear-low 				{ display:none; }
+	.appear-high 				{ display:none; }
+	.appear-highest 			{ display:none; }
+	
+	@mixin blossom { 
+		display: block !important;
+		width: 100% !important;
+		//float:none !important;
+		padding:0 !important;
+	}
+	
+	.blossom-lowest 			{ @include blossom; }
+	.blossom-low 				{ display:none; }	
+	.blossom-high 				{ display:none; }	
+	.blossom-highest 			{ display:none; }
+		
+	.appear-lowest-backward		{ display:block; }
+	
+	.blossom-lowest-backward 	{ display:block; } //For handling Low level browsers that doesn't support mediaquery
+	.blossom-low-backward 		{ display:block; } //For handling Low level browsers that doesn't support mediaquery
+	.blossom-high-backward 		{ display:block; } //For handling Low level browsers that doesn't support mediaquery
+	.blossom-highest-backward 	{ display:block; } //For handling Low level browsers that doesn't support mediaquery	
+	
+	
+/* 	Mobile version. 
+ 	Low Resolution, Resolution 2 (480px)
+-------------------------------------------------------------- */
+@media only screen and (min-width: 480px) {
+	
+	.appear-low 				{ display:block; }
+	.appear-high 				{ display:none; }
+	.appear-highest 			{ display:none; }
+	
+	.blossom-low 				{ @include blossom; }	
+	.blossom-high 				{ display:none; }	
+	.blossom-highest 			{ display:none; }		
+	
+	.appear-lowest-backward		{ display:none; }
+	.appear-low-backward		{ display:block; }	
+}/*/mediaquery*/
+
+ 
+/*	Legacy browsers and Pads version. 
+ 	High Resolution, Resolution 3 (768px)
+-------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+	
+	.appear-high				{ display:block; }
+	.appear-highest 			{ display:none; }
+	
+	.blossom-high 				{ @include blossom; }	
+	.blossom-highest 			{ display:none; }
+	
+	.appear-low-backward		{ display:none; }
+	.appear-high-backward		{ display:block; }		
+}/*/mediaquery*/
+
+/*	Modern Browsers version. 
+ 	Highest Resolution, Resolution 4 (1128px)
+-------------------------------------------------------------- */
+@media only screen and (min-width: 1128px) {
+	
+	.appear-highest 			{ display:block; }
+	
+	.blossom-highest 			{ @include blossom; }	
+	
+	.appear-high-backward		{ display:none; }
+	.appear-highest-backward	{ display:block; }
+	
+	.blossom-highest-backward	{ @include blossom; }	
+	
+}/*/mediaquery*/
+
+@media only screen and (max-width: 1127xpx) {
+
+	.blossom-high-backward 		{ @include blossom; }
+	
+}/*/mediaquery*/
+
+
+@media only screen and (max-width: 767px) {
+	
+	.blossom-low-backward 		{ @include blossom; }
+	
+}/*/mediaquery*/
+
+@media only screen and (max-width: 479px) {
+
+	.blossom-lowest-backward 	{ @include blossom; }
+	
+}/*/mediaquery*/
+
